@@ -1143,7 +1143,7 @@ function closeSheet(e) {
 function launchMT5() {
   // Try MT5 deep link (works if MT5 is installed on Android)
   const sig = lastSignalForSheet;
-  try { window.location.href = 'intent://#Intent;scheme=metatrader5;package=net.metaquotes.metatrader5;end;'; } catch(e) {}
+  try { window.location.href = 'intent://#Intent;action=android.intent.action.VIEW;scheme=metatrader5;package=net.metaquotes.metatrader5;end;'; } catch(e) {}
   toast('Opening MetaTrader 5…');
   closeSheet();
   setTimeout(() => {
